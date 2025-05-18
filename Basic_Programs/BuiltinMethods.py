@@ -86,7 +86,41 @@ def dictionary_methods():
 
 
 def sets_methods():
-    print("Coming soon")
+    set_text = {"Warrior", "Mage", "Merchant", "Seeker", "Thief", "Commander"}
+    set_text2 = {"Magic Seeker", "Cleric", "Merchant", "Commander", "Knight"}
+    print(f"Original set_text: {set_text}\nOriginal set_text2: {set_text2}")
+
+    # Add adds whatever you say. Cannot add duplicate
+    set_text.add("Healer")
+    print(set_text)
+
+    # Remove removes whatever you say 
+    set_text.remove("Commander")
+    print(set_text)
+
+    # Remove index and no error if not found
+    set_text2.discard(0)
+    print(set_text2)
+
+    # Pop for sets removes a random item because sets are unordered
+    setpop = set_text.pop()
+    print(setpop, " Got popped!")
+
+    # Intersection returns common values of two sets
+    intersection_set = set_text.intersection(set_text2)
+    print(intersection_set)
+
+    # Difference only returns items in 1st but not 2nd
+    difference_set = set_text.difference(set_text2)
+    print(difference_set)
+
+    # Union combines two sets
+    union_set = set_text.union(set_text2)
+    print(union_set)
+
+    # Clear empties the set
+    set_text.clear()
+    print("set_text after clear: ", set_text)
 
 def program():
     while True:
