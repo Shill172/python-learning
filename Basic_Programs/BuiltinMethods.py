@@ -47,7 +47,43 @@ def list_methods():
     print(list_text[2:4]) 
 
 def dictionary_methods():
-    print("Coming soon")
+    dict_text = {"Name": "Heismay", "Archetype": "Thief", "Level": 28, "Aura": "MAX", "Race": "Eugif"}
+    print(f"Original dict_text: \n{dict_text}")
+
+    # Get returns value of key
+    print(dict_text.get("Name"))
+
+    # Keys returns all keys 
+    print(dict_text.keys())
+
+    # Values returns all values
+    print(dict_text.values())
+
+    # Items returns all key-value pairs as tuples
+    print(dict_text.items())
+
+    # Update overwrites and adds
+    dict_text.update({"Level": 29, "Kidnapper": True, "Follower Level": 2})
+    print(dict_text)
+
+    # Pop Removes key and returns item
+    print("Popping Follower Level:\n",dict_text.pop("Follower Level"))
+
+    # Pop Item removes the last key value pair
+    print(f"Popping item: {dict_text.popitem()}\nNew list: {dict_text}")
+
+    # key in d 
+    if "Archetype" in dict_text:
+        print("The GOAT has unlocked archetype usage")
+
+    if "Thief" in dict_text.values():
+        print("Heismay is using Thief archetype currently")
+
+    # Clear empties whole dictionary
+    print(f"Cleaing dictionary:{dict_text.clear()}")
+    print(dict_text)
+
+
 
 def sets_methods():
     print("Coming soon")
